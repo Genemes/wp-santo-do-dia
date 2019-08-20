@@ -1,0 +1,314 @@
+/*
+Author: Genemes
+Author URI: http://www.siloe.org.br
+Version: 1.0.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+/*
+*{
+    font-family: 'Oswald', sans-serif;
+}*/
+
+.input-box, .input-file{
+    position: relative;
+}
+.input-box input, .input-box textarea, .input-box input[type=number]{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #6484af;
+    margin-bottom: 20px;
+	border: none;
+	border-bottom: 1px solid #000;
+    background: transparent;
+	box-shadow: inset 0 0 0 transparent;
+	font-family: 'Oswald', sans-serif;
+}
+.input-box label{
+    position: absolute;
+    top: -3px;
+    left: 2%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #6484af;
+    pointer-events: none;
+	transition: .5s;
+	font-family: 'Oswald', sans-serif;
+}
+.input-box input:focus ~ label, .input-box input:valid ~ label, .input-box textarea:focus ~ label, .input-box textarea:valid ~ label{
+    top: -30px;
+    color: #6484af;
+    font-size: 12px;
+	outline: none;
+	font-family: 'Oswald', sans-serif;
+	/* border-bottom: 1px solid #61c161; */
+}
+.input-box input:valid, .input-box textarea:focus, .input-box textarea:valid{
+	border-bottom: 1px solid #61c161;
+}
+
+
+/* 2 - Classes de avisos */
+.alerta {
+    width: 68%;
+    padding: 1%;
+    margin-top: 2%;
+	border-radius: 5px;
+}
+.sucesso{
+	padding:15px;
+	background-color:#A6D0A7;
+	color:#356635;
+	border-color:#356635;
+	border-left:5px solid #356635;
+	font-family: 'Oswald', sans-serif;
+}
+.erro{
+	background-color:#f2dede;
+	color:#b94a48;
+	border-color:#eed3d7;
+	padding:15px;
+	border-left:5px solid #b94a48;
+	font-family: 'Oswald', sans-serif;
+}
+.warning{
+	background-color: #fff3cd;;
+	color: #856404;
+	border-color: #856404;
+	padding:15px;
+	border-left:5px solid #b94a48;
+	font-family: 'Oswald', sans-serif;
+}
+
+.input-large{width:70%}
+.invisivel { display:none  }
+
+
+.botao {
+	border-radius: 2px;
+    text-decoration:none;
+	padding: 10px 35px;
+	height: 50px;
+}
+.btn-sucesso{
+	background:#61c161 !important;
+	color: #ffffff !important;
+	box-shadow: 0 2px 0 #53a653 !important;
+	border-color: #53a653 #53a653 #53a653 !important;
+	font-family: 'Oswald', sans-serif;
+}
+.btn-sucesso:hover, .btn-sucesso:active{
+	background:#53a653 !important;
+	box-shadow: 0 2px 0 #61c161;
+}
+.btn-erro{
+	background:#D04E46 !important;
+	color: #ffffff !important;
+	box-shadow: 0 2px 0 #bd362f !important;
+	border-color: #bd362f #bd362f #bd362f !important;
+	font-family: 'Oswald', sans-serif;
+}
+.btn-erro:hover, .btn-erro:active{
+	background:#bd362f !important;
+}
+
+.btn-info{
+	background:#007fcc !important;
+	color: #ffffff !important;
+	box-shadow: 0 2px 0 #004dcc !important;
+	border-color: #004dcc #004dcc #004dcc !important;
+	font-family: 'Oswald', sans-serif;
+}
+.btn-info:hover, .btn-info:active{
+	background:#004dcc !important;
+}
+.btn-confirm{
+	background:#faaa3a !important;
+	color: #ffffff !important;
+	box-shadow: 0 2px 0 #f89406 !important;
+	border-color: #f89406 #f89406 #f89406 !important;
+	font-family: 'Oswald', sans-serif;
+}
+.btn-confirm:hover, .btn-confirm:active{
+	background:#f89406 !important;
+}
+
+.img-tabela{ width: 50px; height: 50px; }
+
+.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: default;
+}
+
+.welcome-panel {
+	line-height: 1em
+}
+
+/*Tabs Meses*/   
+.grid {
+	list-style: none;
+	margin-left: -40px;
+}
+
+.col {
+	box-sizing: border-box;
+	display: inline-block;
+	margin-right: -.25em;
+	min-height: 1px;
+	padding-left: 40px;
+	vertical-align: top;
+}
+
+.col--1-of-3 {
+	width: 20%;
+}
+
+.col--2-of-3 {
+	width: 80%;
+	padding-right: 20px;
+}
+
+.meses {
+	position: relative;
+	margin: 20px auto 0;
+}
+
+.meses .menu div {
+	padding: 15px 20px 15px 40px;
+	margin-bottom: 2.5px;
+	color: #fff;
+	background: #3F51B5;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	position: relative;
+	vertical-align: middle;
+	font-weight: 700;
+	transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.meses .menu div:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.meses .menu div.active {
+	color: #FBC02D;
+	padding: 15px 20px 15px 20px;
+	border-left: 5px solid #FBC02D !important;
+	transition: 400ms;
+}
+
+ul.linha {
+	position: relative;
+	height: 0px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.linha li {
+	opacity: 0;
+	transform: translateX(50px);
+	position: absolute;
+	list-style: none;
+	transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.linha li.active {
+	transition-delay: .3s;
+	z-index: 2;
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+ul.linha li p {
+	margin: 0;
+	color: #000000;
+}
+
+/* Tabela Santo */
+table, th, td{
+	border-bottom: 1px solid #000000
+}
+tr:nth-child(even){
+	background-color: #f9f9f9;
+}
+tr:nth-child(odd){
+	background-color: #ffffff;
+}
+tr:hover {
+	background-color: #f2f2f2;
+}
+th{
+	padding: 5px 0;
+}
+.selected{
+	background: #abb9d3 !important;
+}
+
+/* Spinner */
+.spinner-loading{
+	border: 8px solid rgba(0, 0, 0, 0.1);
+	border-left-color: #3F51B5;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	animation: spin 2s linear infinite;
+	position: absolute;
+	margin: 50px calc(40% - 30px);
+}
+@keyframes spin{
+	to{
+		transform: rotate(360deg);
+	}
+}
+.botoes-edicao{
+	padding: 20px 0;
+}
+
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 50%;
+}
+.modal-content h3, .modal-content input{
+	text-align: center
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.visivel{
+	display: block;
+}
+
+.img-upload{
+	width: 100px;
+	height: 100px;
+	border: 5px solid rgba(0, 0, 0, 0.1);
+}

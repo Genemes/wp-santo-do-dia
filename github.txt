@@ -1,0 +1,2 @@
+git remote add origim https://github.com/Genemes/santo-do-dia.git;
+git push -u origin master
